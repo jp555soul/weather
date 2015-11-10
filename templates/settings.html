@@ -1,0 +1,29 @@
+<div class="field" id="weatherZip-field">
+	<div class="heading">
+		<label for="zipCode">Zip Code</label>
+		<p class="instructions">Input your zip code.</p>
+	</div>
+	<div class="input">
+		<input class="text fullwidth" type="text" id="zipCode" name="zipCode" value="{% if config_settings.zipCode is not null %}{{ config_settings.zipCode }}{% else %}{{ settings.zipCode }}{% endif %}"{% if config_settings.zipCode is not null %} disabled="disabled"{% endif %}>
+		{% if config_settings.zipCode is not null %}
+			<p class="setting-is-disabled">The zip code has been configured in the config file.</p>
+		{% endif %}
+	</div>
+</div>
+
+<div class="field" id="appId-field">
+	<div class="heading">
+		<label for="appId">App ID</label>
+		<p class="instructions">Input your App ID.</p>
+	</div>
+	<div class="input">
+		<input class="text fullwidth" type="text" id="appId" name="appId" value="{% if config_settings.appId is not null %}{{ config_settings.appId }}{% else %}{{ settings.appId }}{% endif %}"{% if config_settings.appId is not null %} disabled="disabled"{% endif %}>
+		{% if config_settings.appId is not null %}
+			<p class="setting-is-disabled">The App ID has been configured in the config file.</p>
+		{% endif %}
+	</div>
+</div>
+
+<!--  <div id="newNavItem" class="buttons">
+    <button type="submit" class="btn submit add icon formsubmit" data-action="weather/save" data-redirect="settings/plugins/weather">{{ 'Save'|t }}</button>
+</div> -->

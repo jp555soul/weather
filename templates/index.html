@@ -1,0 +1,7 @@
+{% extends "_layouts/cp" %}
+
+{% set title = "Weather" %}
+
+{% block content %}
+	{{ craft.weather.getWeatherData }}
+{% endblock %}
